@@ -55,7 +55,7 @@ const Index = () => {
         id="hero" 
         className="min-h-screen relative flex items-center justify-center"
         style={{
-          backgroundImage: 'url(https://cdn.poehali.dev/projects/b4f3970f-2f35-49e2-af6d-50d2dd206973/files/3e003e5a-2d9b-437f-bca2-e38bc01bda53.jpg)',
+          backgroundImage: 'url(https://cdn.poehali.dev/files/photo_5418229410483082685_y.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
@@ -181,19 +181,19 @@ const Index = () => {
                 <ul className="space-y-3 text-lg text-white/90">
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-gold" size={20} />
-                    <span>Строгий костюм или смокинг</span>
+                    <span>Стильная клубная рубашка или поло</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-gold" size={20} />
-                    <span>Премиальная обувь</span>
+                    <span>Элегантные брюки или чинос</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-gold" size={20} />
-                    <span>Элегантные аксессуары</span>
+                    <span>Модная обувь (лоферы, челси)</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-gold" size={20} />
-                    <span>Безупречный внешний вид</span>
+                    <span>Современные аксессуары</span>
                   </li>
                 </ul>
               </div>
@@ -208,19 +208,19 @@ const Index = () => {
                 <ul className="space-y-3 text-lg text-white/90">
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-secondary" size={20} />
-                    <span>Вечернее платье или коктейльный наряд</span>
+                    <span>Стильное мини-платье или топ с юбкой</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-secondary" size={20} />
-                    <span>Элегантные туфли на каблуке</span>
+                    <span>Модная клубная обувь (ботильоны, туфли)</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-secondary" size={20} />
-                    <span>Изысканные украшения</span>
+                    <span>Трендовые аксессуары</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-secondary" size={20} />
-                    <span>Безупречный макияж и прическа</span>
+                    <span>Эффектный макияж и укладка</span>
                   </li>
                 </ul>
               </div>
@@ -233,9 +233,9 @@ const Index = () => {
               <div>
                 <p className="text-xl font-semibold text-white mb-2">ВАЖНО</p>
                 <p className="text-white/80 text-lg">
-                  Спортивная одежда, кроссовки и джинсы запрещены. Вход только для гостей, 
-                  соответствующих дресс-коду премиального клубного мероприятия. 
-                  XXCLUSIVE — это территория стиля и элегантности.
+                  Спортивная одежда и потрёпанные кроссовки запрещены. Вход только для гостей, 
+                  соответствующих современному клубному стилю. 
+                  XXCLUSIVE — это территория элегантности и актуальной моды.
                 </p>
               </div>
             </div>
