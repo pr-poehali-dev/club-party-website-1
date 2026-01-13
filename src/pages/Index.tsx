@@ -5,16 +5,9 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('hero');
-  const [scrollY, setScrollY] = useState(0);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
 
   useEffect(() => {
     const targetDate = new Date('2026-01-23T22:00:00').getTime();
@@ -76,8 +69,8 @@ const Index = () => {
                 Дата
               </button>
             </div>
-            <Button className="bg-gold text-black hover:bg-gold/90 font-semibold">
-              Забронировать
+            <Button className="bg-gold text-black hover:bg-gold/90 font-semibold px-6 rounded-none border-2 border-white">
+              ЗАБРОНИРОВАТЬ
             </Button>
           </div>
         </div>
@@ -88,13 +81,11 @@ const Index = () => {
         className="min-h-screen relative flex items-center justify-center overflow-hidden"
       >
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 glitch-bg"
           style={{
             backgroundImage: 'url(https://cdn.poehali.dev/files/photo_5418229410483082685_y.jpg)',
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            transform: `translateY(${scrollY * 0.5}px)`,
-            transition: 'transform 0.1s ease-out'
+            backgroundPosition: 'center'
           }}
         />
         <div className="absolute inset-0 bg-black/60"></div>
@@ -109,7 +100,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-gold text-black hover:bg-gold/90 font-bold text-lg px-8 py-6"
+              className="bg-gold text-black hover:bg-gold/90 font-bold text-lg px-8 py-6 rounded-none uppercase tracking-wider"
               onClick={() => scrollToSection('date')}
             >
               <Icon name="Calendar" className="mr-2" size={20} />
@@ -118,7 +109,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-bold text-lg px-8 py-6"
+              className="border-2 border-white text-white hover:bg-white hover:text-black font-bold text-lg px-8 py-6 rounded-none uppercase tracking-wider"
               onClick={() => scrollToSection('about')}
             >
               Узнать больше
@@ -142,10 +133,10 @@ const Index = () => {
           </h2>
           
           <div className="grid gap-8">
-            <Card className="bg-white/5 border-white/10 p-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+            <Card className="bg-white/5 border-white/10 p-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 rounded-none border-l-4 border-l-white">
               <div className="flex items-start gap-4">
-                <div className="bg-gold/20 p-4 rounded-lg">
-                  <Icon name="Sparkles" className="text-gold" size={32} />
+                <div className="bg-white/10 p-4 rounded-none">
+                  <Icon name="Sparkles" className="text-white" size={32} />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-3 text-gold">Незабываемая атмосфера</h3>
@@ -158,13 +149,13 @@ const Index = () => {
               </div>
             </Card>
 
-            <Card className="bg-white/5 border-white/10 p-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+            <Card className="bg-white/5 border-white/10 p-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 rounded-none border-l-4 border-l-white">
               <div className="flex items-start gap-4">
-                <div className="bg-secondary/20 p-4 rounded-lg">
-                  <Icon name="Music" className="text-secondary" size={32} />
+                <div className="bg-white/10 p-4 rounded-none">
+                  <Icon name="Music" className="text-white" size={32} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 text-secondary">Отличная музыка</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-white">Отличная музыка</h3>
                   <p className="text-lg text-white/80 leading-relaxed">
                     Зажигательные треки и лучшие хиты создадут идеальную атмосферу для танцев. 
                     Приготовьтесь к взрывной энергетике и незабываемому музыкальному опыту, 
@@ -174,13 +165,13 @@ const Index = () => {
               </div>
             </Card>
 
-            <Card className="bg-white/5 border-white/10 p-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+            <Card className="bg-white/5 border-white/10 p-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 rounded-none border-l-4 border-l-white">
               <div className="flex items-start gap-4">
-                <div className="bg-gold/20 p-4 rounded-lg">
-                  <Icon name="Martini" className="text-gold" size={32} />
+                <div className="bg-white/10 p-4 rounded-none">
+                  <Icon name="Martini" className="text-white" size={32} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 text-gold">Элитный алкоголь</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-white">Элитный алкоголь</h3>
                   <p className="text-lg text-white/80 leading-relaxed">
                     Бар с премиальными напитками высшего качества для истинных ценителей. 
                     Каждый гость XXCLUSIVE — это VIP персона, достойная только лучшего.
@@ -256,7 +247,7 @@ const Index = () => {
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="bg-gradient-to-br from-white/10 to-white/5 border-gold/30 p-10 backdrop-blur-sm">
+            <Card className="bg-white/5 border-white/20 p-10 backdrop-blur-sm rounded-none">
               <div className="flex flex-col items-center text-center">
                 <div className="bg-gold/20 p-6 rounded-full mb-6">
                   <Icon name="User" className="text-gold" size={48} />
@@ -283,7 +274,7 @@ const Index = () => {
               </div>
             </Card>
 
-            <Card className="bg-gradient-to-br from-white/10 to-white/5 border-secondary/30 p-10 backdrop-blur-sm">
+            <Card className="bg-white/5 border-white/20 p-10 backdrop-blur-sm rounded-none">
               <div className="flex flex-col items-center text-center">
                 <div className="bg-secondary/20 p-6 rounded-full mb-6">
                   <Icon name="Sparkle" className="text-secondary" size={48} />
@@ -311,7 +302,7 @@ const Index = () => {
             </Card>
           </div>
 
-          <Card className="bg-gradient-to-r from-gold/10 to-secondary/10 border-gold p-8 backdrop-blur-sm">
+          <Card className="bg-white/5 border-white/20 p-8 backdrop-blur-sm rounded-none border-l-4 border-l-white">
             <div className="flex items-center gap-4">
               <Icon name="AlertCircle" className="text-gold" size={32} />
               <div>
@@ -337,7 +328,7 @@ const Index = () => {
             <span className="text-white">ДАТА</span> <span className="text-gold">СОБЫТИЯ</span>
           </h2>
 
-          <Card className="bg-white/5 border-gold/50 p-16 backdrop-blur-sm relative overflow-hidden">
+          <Card className="bg-white/5 border-white/20 p-16 backdrop-blur-sm relative overflow-hidden rounded-none">
             <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-secondary/10"></div>
             <div className="relative z-10">
               <div className="mb-8">
@@ -380,9 +371,9 @@ const Index = () => {
                 </div>
               </div>
               <p className="text-xl text-white/70 mb-10 font-light">
-                Приготовьтесь к ночи, которая изменит ваше представление о клубной культуре
+                Незабываемая ночь, которая запомнится навсегда
               </p>
-              <Button size="lg" className="bg-gold text-black hover:bg-gold/90 font-black text-xl px-12 py-8">
+              <Button size="lg" className="bg-gold text-black hover:bg-gold/90 font-black text-xl px-12 py-8 rounded-none uppercase tracking-wider">
                 <Icon name="Ticket" className="mr-3" size={24} />
                 ЗАБРОНИРОВАТЬ МЕСТО
               </Button>

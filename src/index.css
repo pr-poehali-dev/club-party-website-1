@@ -107,4 +107,33 @@
       transform: translateY(0);
     }
   }
+
+  .glitch-bg {
+    animation: glitch 3s infinite;
+  }
+
+  @keyframes glitch {
+    0%,
+    90%,
+    100% {
+      filter: none;
+      transform: translate(0);
+    }
+    91% {
+      filter: hue-rotate(0deg) contrast(150%);
+      transform: translate(-2px, 2px);
+    }
+    92% {
+      filter: hue-rotate(180deg) contrast(120%);
+      transform: translate(2px, -2px);
+    }
+    93% {
+      filter: hue-rotate(0deg) contrast(100%);
+      transform: translate(-1px, 1px);
+    }
+    94% {
+      filter: none;
+      transform: translate(0);
+    }
+  }
 }
