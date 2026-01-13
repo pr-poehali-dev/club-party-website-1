@@ -1,10 +1,42 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('hero');
+  const [scrollY, setScrollY] = useState(0);
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const targetDate = new Date('2026-01-23T22:00:00').getTime();
+    
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      
+      if (distance > 0) {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      }
+    };
+    
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -53,14 +85,18 @@ const Index = () => {
 
       <section 
         id="hero" 
-        className="min-h-screen relative flex items-center justify-center"
-        style={{
-          backgroundImage: 'url(https://cdn.poehali.dev/files/photo_5418229410483082685_y.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
+        className="min-h-screen relative flex items-center justify-center overflow-hidden"
       >
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(https://cdn.poehali.dev/files/photo_5418229410483082685_y.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            transform: `translateY(${scrollY * 0.5}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}
+        />
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 text-center px-6 animate-fade-in">
           <h1 className="text-8xl md:text-9xl font-black mb-6 tracking-tighter">
@@ -312,6 +348,25 @@ const Index = () => {
               </div>
               <div className="text-5xl font-bold mb-8 text-white">
                 2026
+              </div>
+              
+              <div className="grid grid-cols-4 gap-4 mb-8 max-w-2xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                  <div className="text-4xl font-black text-gold mb-1">{timeLeft.days}</div>
+                  <div className="text-sm text-white/70 uppercase tracking-wider">Дней</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                  <div className="text-4xl font-black text-gold mb-1">{timeLeft.hours}</div>
+                  <div className="text-sm text-white/70 uppercase tracking-wider">Часов</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                  <div className="text-4xl font-black text-gold mb-1">{timeLeft.minutes}</div>
+                  <div className="text-sm text-white/70 uppercase tracking-wider">Минут</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                  <div className="text-4xl font-black text-gold mb-1">{timeLeft.seconds}</div>
+                  <div className="text-sm text-white/70 uppercase tracking-wider">Секунд</div>
+                </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
                 <div className="flex items-center gap-3">
