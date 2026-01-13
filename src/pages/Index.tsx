@@ -157,6 +157,55 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-32 px-6 bg-black relative">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-6xl font-black text-center mb-8">
+            <span className="text-white">ПРИМЕРЫ</span> <span className="text-gold">ЛУКОВ</span>
+          </h2>
+          <p className="text-xl text-center text-white/70 mb-16 font-light">
+            ВДОХНОВИСЬ И СОЗДАЙ СВОЙ ОБРАЗ
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="aspect-[3/4] overflow-hidden rounded-lg border-2 border-white/20 hover:border-white/50 transition-all duration-300">
+              <img 
+                src="https://cdn.poehali.dev/files/photo_5411543177195361170_x.jpg" 
+                alt="Look 1" 
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="aspect-[3/4] overflow-hidden rounded-lg border-2 border-white/20 hover:border-white/50 transition-all duration-300">
+              <img 
+                src="https://cdn.poehali.dev/files/photo_5411357913781048249_y.jpg" 
+                alt="Look 2" 
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="aspect-[3/4] overflow-hidden rounded-lg border-2 border-white/20 hover:border-white/50 transition-all duration-300">
+              <img 
+                src="https://cdn.poehali.dev/files/photo_5411357913781048248_y.jpg" 
+                alt="Look 3" 
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="aspect-[3/4] overflow-hidden rounded-lg border-2 border-white/20 hover:border-white/50 transition-all duration-300">
+              <img 
+                src="https://cdn.poehali.dev/files/photo_5411357913781048253_y.jpg" 
+                alt="Look 4" 
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="aspect-[3/4] overflow-hidden rounded-lg border-2 border-white/20 hover:border-white/50 transition-all duration-300">
+              <img 
+                src="https://cdn.poehali.dev/files/photo_5411357913781048247_y.jpg" 
+                alt="Look 5" 
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="dresscode" className="py-32 px-6 bg-black relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"></div>
@@ -268,12 +317,12 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
                 <div className="flex items-center gap-3">
                   <Icon name="Clock" className="text-secondary" size={28} />
-                  <span className="text-2xl font-semibold text-white">22:00</span>
+                  <span className="text-2xl font-semibold text-white">???</span>
                 </div>
                 <div className="hidden sm:block w-2 h-2 bg-gold rounded-full"></div>
                 <div className="flex items-center gap-3">
                   <Icon name="MapPin" className="text-secondary" size={28} />
-                  <span className="text-2xl font-semibold text-white">XXCLUSIVE CLUB</span>
+                  <span className="text-2xl font-semibold text-white">???</span>
                 </div>
               </div>
               <p className="text-xl text-white/70 mb-10 font-light">
