@@ -181,19 +181,19 @@ const Index = () => {
                 <ul className="space-y-3 text-lg text-white/90">
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-gold" size={20} />
-                    <span>Стильная клубная рубашка или поло</span>
+                    <span>Широкие джинсы</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-gold" size={20} />
-                    <span>Элегантные брюки или чинос</span>
+                    <span>Яркие футболки</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-gold" size={20} />
-                    <span>Модная обувь (лоферы, челси)</span>
+                    <span>Цепи и кольца</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-gold" size={20} />
-                    <span>Современные аксессуары</span>
+                    <span>Другие аксессуары по желанию</span>
                   </li>
                 </ul>
               </div>
@@ -208,19 +208,19 @@ const Index = () => {
                 <ul className="space-y-3 text-lg text-white/90">
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-secondary" size={20} />
-                    <span>Стильное мини-платье или топ с юбкой</span>
+                    <span>Короткая юбка или шорты</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-secondary" size={20} />
-                    <span>Модная клубная обувь (ботильоны, туфли)</span>
+                    <span>Модный лук</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-secondary" size={20} />
-                    <span>Трендовые аксессуары</span>
+                    <span>Разнообразные аксессуары</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <Icon name="Check" className="text-secondary" size={20} />
-                    <span>Эффектный макияж и укладка</span>
+                    <span>Всё, что пожелаешь надеть!</span>
                   </li>
                 </ul>
               </div>
