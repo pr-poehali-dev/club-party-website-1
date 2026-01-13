@@ -128,11 +128,11 @@ const Index = () => {
                   <Icon name="Music" className="text-secondary" size={32} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 text-secondary">Лучшие диджеи города</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-secondary">Отличная музыка</h3>
                   <p className="text-lg text-white/80 leading-relaxed">
-                    Топовые резиденты будут создавать непрерывный музыкальный поток из лучших 
-                    хитов EDM, House и Tech House. Приготовьтесь к взрывной энергетике 
-                    и танцам до рассвета под самые горячие треки сезона.
+                    Зажигательные треки и лучшие хиты создадут идеальную атмосферу для танцев. 
+                    Приготовьтесь к взрывной энергетике и незабываемому музыкальному опыту, 
+                    который запомнится надолго.
                   </p>
                 </div>
               </div>
@@ -144,11 +144,10 @@ const Index = () => {
                   <Icon name="Martini" className="text-gold" size={32} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 text-gold">VIP сервис</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-gold">Элитный алкоголь</h3>
                   <p className="text-lg text-white/80 leading-relaxed">
-                    Эксклюзивный бар с премиальными напитками, профессиональные бармены-шоумены 
-                    и персональный сервис высшего класса. Каждый гость XXCLUSIVE — это VIP персона, 
-                    достойная королевского обслуживания.
+                    Бар с премиальными напитками высшего качества для истинных ценителей. 
+                    Каждый гость XXCLUSIVE — это VIP персона, достойная только лучшего.
                   </p>
                 </div>
               </div>
